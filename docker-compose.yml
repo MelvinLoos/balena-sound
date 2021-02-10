@@ -66,3 +66,15 @@ services:
     network_mode: host
     ports:
       - 49494:49494
+
+  wifi-connect:
+      restart: always
+      build: ./plugins/wifi-connect
+      network_mode: host
+      labels:
+          io.balena.features.dbus: '1'
+          io.balena.features.firmware: '1'
+      cap_add:
+          - NET_ADMIN
+      environment:
+          DBUS_SYSTEM_BUS_ADDRESS: "unix:path=/host/run/dbus/system_bus_socket"
