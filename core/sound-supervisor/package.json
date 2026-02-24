@@ -19,7 +19,7 @@
     "balena-sdk": "^15.39.1",
     "cote": "^1.0.0",
     "express": "^4.17.1",
-    "express-async-handler": "~1.1.4",
+    "express-async-handler": "~1.2.0",
     "ts-retry-promise": "^0.5.0"
   },
   "devDependencies": {
